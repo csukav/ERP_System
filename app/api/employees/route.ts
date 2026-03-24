@@ -1,20 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { getCollection } from '@/lib/mongodb';
 import { Employee } from '@/lib/types';
-
-const DATA_FILE = path.join(process.cwd(), 'data', 'employees.json');
-
-function readData(): Employee[] {
-  return JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
-}
-function writeData(data: Employee[]): void {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
-}
 
 export async function GET() {
   try {
-    return NextResponse.json(readData());
+    const coll = await getCollection<Employee>('employees');
+    const employees = await coll.find({}, { projection: { _id: 0 } }).toArray();
+    return NextResponse.json(employees);
   } catch {
     return NextResponse.json({ error: 'Hiba az adatok olvasásakor' }, { status: 500 });
   }
@@ -23,7 +15,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const employees = readData();
+    const coll = await getCollection<Employee>('employees');
     const newEmployee: Employee = {
       id: `emp-${Date.now()}`,
       name: body.name,
@@ -34,8 +26,7 @@ export async function POST(req: NextRequest) {
       email: body.email,
       phone: body.phone,
     };
-    employees.push(newEmployee);
-    writeData(employees);
+    await coll.insertOne({ ...newEmployee } as never);
     return NextResponse.json(newEmployee, { status: 201 });
   } catch {
     return NextResponse.json({ error: 'Hiba az alkalmazott létrehozásakor' }, { status: 500 });

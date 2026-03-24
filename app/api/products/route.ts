@@ -1,20 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { getCollection } from '@/lib/mongodb';
 import { Product } from '@/lib/types';
-
-const DATA_FILE = path.join(process.cwd(), 'data', 'products.json');
-
-function readData(): Product[] {
-  return JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
-}
-function writeData(data: Product[]): void {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
-}
 
 export async function GET() {
   try {
-    return NextResponse.json(readData());
+    const coll = await getCollection<Product>('products');
+    const products = await coll.find({}, { projection: { _id: 0 } }).toArray();
+    return NextResponse.json(products);
   } catch {
     return NextResponse.json({ error: 'Hiba az adatok olvasásakor' }, { status: 500 });
   }
@@ -23,7 +15,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const products = readData();
+    const coll = await getCollection<Product>('products');
     const newProduct: Product = {
       id: `prod-${Date.now()}`,
       name: body.name,
@@ -33,8 +25,7 @@ export async function POST(req: NextRequest) {
       stockQuantity: Number(body.stockQuantity),
       minStockLevel: Number(body.minStockLevel),
     };
-    products.push(newProduct);
-    writeData(products);
+    await coll.insertOne({ ...newProduct } as never);
     return NextResponse.json(newProduct, { status: 201 });
   } catch {
     return NextResponse.json({ error: 'Hiba a termék létrehozásakor' }, { status: 500 });

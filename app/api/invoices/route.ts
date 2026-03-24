@@ -1,20 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { getCollection } from '@/lib/mongodb';
 import { Invoice } from '@/lib/types';
-
-const DATA_FILE = path.join(process.cwd(), 'data', 'invoices.json');
-
-function readData(): Invoice[] {
-  return JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
-}
-function writeData(data: Invoice[]): void {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
-}
 
 export async function GET() {
   try {
-    return NextResponse.json(readData());
+    const coll = await getCollection<Invoice>('invoices');
+    const invoices = await coll.find({}, { projection: { _id: 0 } }).toArray();
+    return NextResponse.json(invoices);
   } catch {
     return NextResponse.json({ error: 'Hiba az adatok olvasásakor' }, { status: 500 });
   }
@@ -23,7 +15,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const invoices = readData();
+    const coll = await getCollection<Invoice>('invoices');
     const newInvoice: Invoice = {
       id: `inv-${Date.now()}`,
       customerId: body.customerId,
@@ -33,8 +25,7 @@ export async function POST(req: NextRequest) {
       createdAt: new Date().toISOString(),
       dueDate: body.dueDate,
     };
-    invoices.push(newInvoice);
-    writeData(invoices);
+    await coll.insertOne({ ...newInvoice } as never);
     return NextResponse.json(newInvoice, { status: 201 });
   } catch {
     return NextResponse.json({ error: 'Hiba a számla létrehozásakor' }, { status: 500 });
