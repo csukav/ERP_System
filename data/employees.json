@@ -1,0 +1,62 @@
+[
+  {
+    "id": "emp-001",
+    "name": "Tóth Gábor",
+    "position": "Fejlesztési vezető",
+    "department": "IT",
+    "salary": 850000,
+    "startDate": "2020-03-01",
+    "email": "toth.gabor@erpsystem.hu",
+    "phone": "+36 30 111 2222"
+  },
+  {
+    "id": "emp-002",
+    "name": "Kiss Éva",
+    "position": "Értékesítési menedzser",
+    "department": "Értékesítés",
+    "salary": 620000,
+    "startDate": "2021-07-15",
+    "email": "kiss.eva@erpsystem.hu",
+    "phone": "+36 20 333 4444"
+  },
+  {
+    "id": "emp-003",
+    "name": "Fekete Péter",
+    "position": "Könyvelő",
+    "department": "Pénzügy",
+    "salary": 550000,
+    "startDate": "2019-01-10",
+    "email": "fekete.peter@erpsystem.hu",
+    "phone": "+36 70 555 6666"
+  },
+  {
+    "id": "emp-004",
+    "name": "Molnár Andrea",
+    "position": "HR generális",
+    "department": "HR",
+    "salary": 480000,
+    "startDate": "2022-04-01",
+    "email": "molnar.andrea@erpsystem.hu",
+    "phone": "+36 30 777 8888"
+  },
+  {
+    "id": "emp-005",
+    "name": "Balogh Zoltán",
+    "position": "Raktáros",
+    "department": "Logisztika",
+    "salary": 380000,
+    "startDate": "2023-09-01",
+    "email": "balogh.zoltan@erpsystem.hu",
+    "phone": "+36 20 999 0000"
+  },
+  {
+    "id": "emp-1774344002535",
+    "name": "Csuka Viktor",
+    "position": "Rendszergazda",
+    "department": "",
+    "salary": 300000,
+    "startDate": "2025-02-01",
+    "email": "csukav@gmail.com",
+    "phone": ""
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "prod-001",
+    "name": "Irodai szék (ergonómikus)",
+    "sku": "SZEK-ERG-001",
+    "category": "Bútor",
+    "price": 45900,
+    "stockQuantity": 12,
+    "minStockLevel": 5
+  },
+  {
+    "id": "prod-002",
+    "name": "Íróasztal (140x70 cm)",
+    "sku": "ASZTAL-140-001",
+    "category": "Bútor",
+    "price": 89900,
+    "stockQuantity": 7,
+    "minStockLevel": 3
+  },
+  {
+    "id": "prod-003",
+    "name": "Monitor (27\", 4K)",
+    "sku": "MON-27-4K-001",
+    "category": "Elektronika",
+    "price": 129000,
+    "stockQuantity": 3,
+    "minStockLevel": 5
+  },
+  {
+    "id": "prod-004",
+    "name": "Laptop (Business, i7)",
+    "sku": "LAPTOP-BUS-001",
+    "category": "Elektronika",
+    "price": 389000,
+    "stockQuantity": 5,
+    "minStockLevel": 3
+  },
+  {
+    "id": "prod-005",
+    "name": "Nyomtató (A4, lézer)",
+    "sku": "NYOM-A4-LEZ-001",
+    "category": "Elektronika",
+    "price": 54900,
+    "stockQuantity": 8,
+    "minStockLevel": 4
+  },
+  {
+    "id": "prod-006",
+    "name": "Irodai papír (A4, 500 lap)",
+    "sku": "PAP-A4-500-001",
+    "category": "Irodaszer",
+    "price": 1290,
+    "stockQuantity": 150,
+    "minStockLevel": 50
+  },
+  {
+    "id": "prod-007",
+    "name": "Toner fekete (nagy kapacitású)",
+    "sku": "TON-FEK-NK-001",
+    "category": "Irodaszer",
+    "price": 12900,
+    "stockQuantity": 2,
+    "minStockLevel": 5
+  },
+  {
+    "id": "prod-008",
+    "name": "Szoftver licenc (1 év)",
+    "sku": "SZOFT-LIC-001",
+    "category": "Szoftver",
+    "price": 24900,
+    "stockQuantity": 20,
+    "minStockLevel": 5
+  },
+  {
+    "id": "prod-009",
+    "name": "Webkamera (1080p, USB)",
+    "sku": "WEBKAM-1080-001",
+    "category": "Elektronika",
+    "price": 15900,
+    "stockQuantity": 11,
+    "minStockLevel": 5
+  },
+  {
+    "id": "prod-010",
+    "name": "Headset (vezetékes, zajszűrős)",
+    "sku": "HEAD-VEZ-001",
+    "category": "Elektronika",
+    "price": 18900,
+    "stockQuantity": 4,
+    "minStockLevel": 5
+  },
+  {
+    "id": "prod-1774346491437",
+    "name": "Airpods",
+    "sku": "APPLE-AIR",
+    "category": "Irodaszer",
+    "price": 75000,
+    "stockQuantity": 1,
+    "minStockLevel": 1
+  }
+]

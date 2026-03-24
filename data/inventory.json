@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mov-001",
+    "productId": "prod-001",
+    "type": "in",
+    "quantity": 15,
+    "note": "Kezdeti készlet felvétel",
+    "createdAt": "2024-01-01T08:00:00.000Z"
+  },
+  {
+    "id": "mov-002",
+    "productId": "prod-001",
+    "type": "out",
+    "quantity": 3,
+    "note": "Kiszállítás - Kovács Kft.",
+    "createdAt": "2024-06-10T10:00:00.000Z"
+  },
+  {
+    "id": "mov-003",
+    "productId": "prod-003",
+    "type": "in",
+    "quantity": 10,
+    "note": "Kezdeti készlet felvétel",
+    "createdAt": "2024-01-01T08:00:00.000Z"
+  },
+  {
+    "id": "mov-004",
+    "productId": "prod-003",
+    "type": "out",
+    "quantity": 7,
+    "note": "Kiszállítás - Nagy Zrt.",
+    "createdAt": "2024-08-20T14:00:00.000Z"
+  },
+  {
+    "id": "mov-005",
+    "productId": "prod-007",
+    "type": "in",
+    "quantity": 10,
+    "note": "Készlet feltöltés",
+    "createdAt": "2024-09-01T09:00:00.000Z"
+  },
+  {
+    "id": "mov-006",
+    "productId": "prod-007",
+    "type": "out",
+    "quantity": 8,
+    "note": "Belső felhasználás",
+    "createdAt": "2024-12-15T11:00:00.000Z"
+  }
+]

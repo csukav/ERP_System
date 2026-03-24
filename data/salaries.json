@@ -1,0 +1,146 @@
+[
+  {
+    "id": "sal-001",
+    "employeeId": "emp-001",
+    "month": 1,
+    "year": 2025,
+    "amount": 850000,
+    "status": "paid",
+    "paidAt": "2025-01-31T10:00:00.000Z"
+  },
+  {
+    "id": "sal-002",
+    "employeeId": "emp-002",
+    "month": 1,
+    "year": 2025,
+    "amount": 620000,
+    "status": "paid",
+    "paidAt": "2025-01-31T10:00:00.000Z"
+  },
+  {
+    "id": "sal-003",
+    "employeeId": "emp-003",
+    "month": 1,
+    "year": 2025,
+    "amount": 550000,
+    "status": "paid",
+    "paidAt": "2025-01-31T10:00:00.000Z"
+  },
+  {
+    "id": "sal-004",
+    "employeeId": "emp-004",
+    "month": 1,
+    "year": 2025,
+    "amount": 480000,
+    "status": "paid",
+    "paidAt": "2025-01-31T10:00:00.000Z"
+  },
+  {
+    "id": "sal-005",
+    "employeeId": "emp-005",
+    "month": 1,
+    "year": 2025,
+    "amount": 380000,
+    "status": "paid",
+    "paidAt": "2025-01-31T10:00:00.000Z"
+  },
+  {
+    "id": "sal-006",
+    "employeeId": "emp-001",
+    "month": 2,
+    "year": 2025,
+    "amount": 850000,
+    "status": "paid",
+    "paidAt": "2025-02-28T10:00:00.000Z"
+  },
+  {
+    "id": "sal-007",
+    "employeeId": "emp-002",
+    "month": 2,
+    "year": 2025,
+    "amount": 620000,
+    "status": "paid",
+    "paidAt": "2025-02-28T10:00:00.000Z"
+  },
+  {
+    "id": "sal-008",
+    "employeeId": "emp-003",
+    "month": 2,
+    "year": 2025,
+    "amount": 550000,
+    "status": "paid",
+    "paidAt": "2025-02-28T10:00:00.000Z"
+  },
+  {
+    "id": "sal-009",
+    "employeeId": "emp-004",
+    "month": 2,
+    "year": 2025,
+    "amount": 480000,
+    "status": "paid",
+    "paidAt": "2025-02-28T10:00:00.000Z"
+  },
+  {
+    "id": "sal-010",
+    "employeeId": "emp-005",
+    "month": 2,
+    "year": 2025,
+    "amount": 380000,
+    "status": "paid",
+    "paidAt": "2025-02-28T10:00:00.000Z"
+  },
+  {
+    "id": "sal-011",
+    "employeeId": "emp-001",
+    "month": 3,
+    "year": 2025,
+    "amount": 850000,
+    "status": "pending",
+    "paidAt": null
+  },
+  {
+    "id": "sal-012",
+    "employeeId": "emp-002",
+    "month": 3,
+    "year": 2025,
+    "amount": 620000,
+    "status": "pending",
+    "paidAt": null
+  },
+  {
+    "id": "sal-013",
+    "employeeId": "emp-003",
+    "month": 3,
+    "year": 2025,
+    "amount": 550000,
+    "status": "pending",
+    "paidAt": null
+  },
+  {
+    "id": "sal-014",
+    "employeeId": "emp-004",
+    "month": 3,
+    "year": 2025,
+    "amount": 480000,
+    "status": "pending",
+    "paidAt": null
+  },
+  {
+    "id": "sal-015",
+    "employeeId": "emp-005",
+    "month": 3,
+    "year": 2025,
+    "amount": 380000,
+    "status": "pending",
+    "paidAt": null
+  },
+  {
+    "id": "sal-1774344002610",
+    "employeeId": "emp-1774344002535",
+    "month": 3,
+    "year": 2026,
+    "amount": 300000,
+    "status": "pending",
+    "paidAt": null
+  }
+]

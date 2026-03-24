@@ -1,0 +1,12 @@
+'use client';
+
+import { Loader2 } from 'lucide-react';
+
+export default function LoadingSpinner({ text = 'Betöltés...' }: { text?: string }) {
+  return (
+    <div className="flex flex-col items-center justify-center py-16 gap-3 text-muted-foreground">
+      <Loader2 className="w-8 h-8 animate-spin" />
+      <span className="text-sm">{text}</span>
+    </div>
+  );
+}
